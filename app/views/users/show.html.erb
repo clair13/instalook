@@ -8,7 +8,7 @@
 
     <div class="col-md-8 basic-info">
       <div class="user-wrapper">
-        <h2 class="username">Clair</h2>
+        <h2 class="username"><%= current_user.username %></h2>
         <a class="Edit-profile" href="<%= edit_user_path(cirrent_user) %>">
           <button>Edit Profile</button>
         </a>
@@ -18,7 +18,7 @@
         <li><span>203</span> followers</li>
         <li><span>146</span> following</li>
       </ul>
-      <h2 class="name">Geo Fra</h2>
+      <h2 class="name"><%= current_user.name %></h2>
       <a class="website">clair.com</a>
     </div>
   </div>
