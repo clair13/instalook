@@ -4,6 +4,9 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @post = Post.find(params[:id])
+
   private
 
   def post_params
