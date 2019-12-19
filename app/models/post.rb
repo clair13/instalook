@@ -11,4 +11,8 @@ class Post < ApplicationRecord
   def image_presence
     errors.add(:image, "can't be blanked") unless image.attached?
   end
+
+  def extract_name_hash_tags
+    description.to_s.scan(/#\w+/).map{|name| name.gsub("#", "")}
+  end
 end
