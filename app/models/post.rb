@@ -3,6 +3,9 @@ class Post < ApplicationRecord
 
   has_one_attached :image
 
+  has_many :post_hash_tags
+  has_many :hash_tags, through: :post_hash_tags
+
   validate :image_presence
 
   def image_presence
