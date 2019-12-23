@@ -9,6 +9,6 @@
   </div>
   <%= image_tag post.image, class: 'main-image' %>
   <div class="description">
-    <%= post.description %>
+    <%= render partial: "posts/description", locals: {post: post} %>
   </div>
 </section>
